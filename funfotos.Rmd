@@ -1,0 +1,16 @@
+---
+title: "fun fotos"
+output: 
+      html_document
+---
+
+my baby nephews are so ccuuuuuute , we hang out all the time  
+
+here is all three of us as cherries  
+![]<image src ="./pix/cherries.jpg" style="width:50%">
+<image src = "./pix/home_photo.jpg" style="float:left;margin-right:20px; margin-top: 20px;margin-left:10px;width:25%">
+and them being bannnaaanazzz  
+![]<image src ="./pix/bananas.jpg" style="width:50%">
+
+and my puppy foucault! She's 8 years old now :) a lil grandma  
+![]<image src = "./pix/doggo.jpg" style="width:50%">

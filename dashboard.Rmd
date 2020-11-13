@@ -1,0 +1,76 @@
+---
+title: "Instacart Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE, echo = FALSE}
+library(htmlwidgets)
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+
+data("instacart")
+
+#find popular items in baking ingredients
+instacart_popular_items = 
+  instacart %>% 
+  select (
+   aisle,order_hour_of_day, order_dow, product_name) %>%
+  filter(aisle %in% c("baking ingredients")) %>%
+  count(product_name) %>% 
+  mutate(rank = min_rank(desc(n))) %>% 
+  filter(rank < 6) %>% 
+  arrange(desc(n)) 
+
+instacart_pop_times = 
+  instacart %>%
+  select (
+   aisle,order_hour_of_day, order_dow, product_name) %>%
+  filter(product_name %in% c("Light Brown Sugar", "Pure Baking Soda", "Cane Sugar", "Premium Pure Cane Granulated Sugar","Organic Vanilla Extract")) %>%
+  group_by(product_name) %>%
+  count(order_hour_of_day)
+```
+
+Column {data-width=550}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+instacart_pop_times %>%
+  plot_ly(
+    x = ~order_hour_of_day, y = ~n, type = "scatter", mode = "markers",
+    color = ~product_name, title = "Popular times to order products") %>%
+    layout(legend = list(x = 0.8, y = 1)) %>%
+          layout(legend = list(font = list(size = 10)))
+```
+
+
+Column {data-width=450}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+instacart_pop_times %>%
+  plot_ly (y=~order_hour_of_day, color = ~product_name, type = "box") %>%
+    layout(xaxis = list(tickfont = list(size = 10)), 
+        yaxis = list(tickfont = list(size = 10))) %>% 
+        layout(legend = list(font = list(size = 7)))
+```
+
+### Chart C
+
+```{r}
+
+instacart_pop_times %>%
+  plot_ly(x=~order_hour_of_day, y=~n, color = ~product_name, type ="bar") %>%
+    layout(showlegend = TRUE, legend = list(font = list(size = 7))) %>%
+    layout(legend = list(x = 0.8, y = 1))
+```
+
+

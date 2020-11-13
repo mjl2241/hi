@@ -1,0 +1,12 @@
+---
+title: ""
+output: 
+      html_document
+---
+<image src = "./pix/home_photo.jpg" style="float:left;margin-right:20px; margin-top: 20px;margin-left:10px;width:25%">
+
+Michelle is currently studying her master's degree at Columbia University Mailman School of Public Health in the Department of Population and Family. She is interested in socil inequalities, health, and technology. Taking a health justice approach, she considers how and if advancements in technology can positively affect areas where public health is at risk. Her long term goal is to explore the potential for Artificial Intelligence and advanced technologies to fill the gaps in humanitarian aid settings. Prior to coming to Columbia, she worked as a UX researcher in Los Angeles, California and studied Philosophy and Biology at Wesleyan University. 
+
+Michelle's important values are **integrity, transparency, and generosity**, which she tries to uphold and live by everyday. Her personal life goal is to be a positive influence in my community and uphold strong moral values. 
+
+[about](about.html)
