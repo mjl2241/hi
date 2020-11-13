@@ -13,4 +13,4 @@ navbar:
       href: http://github.com/mjl2241/
 output:
   html_document:
-    theme: cerulean
+  css: style.css
