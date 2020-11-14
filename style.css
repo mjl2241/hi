@@ -20,6 +20,7 @@ a {
 a:hover {
  color: #8b008b; /* darker magenta when hovering */
 }
+
 /*----------------ADDING WHITE SPACE-------------*/
 
 .title {
@@ -36,7 +37,15 @@ a:hover {
   margin-bottom: 0.75em;
 }
 
-/* NO TOC on mobile */
+/* TOC on mobile */
+.tocify {
+  position: -webkit-sticky;
+  position: sticky; 
+  top: 120px; /*Controls where TOC stops when sticky */
+  width: 100% !important;
+  border: none;
+}
+
 @media screen and (max-width: 767px){
 
   .col-xs-12.col-sm-4.col-md-3 {
@@ -50,13 +59,10 @@ a:hover {
   .bottom-text {
     font-size: 40px;
   }
-  
-  
-}
 
 /*----------------NAVBAR ---------------*/
 .navbar-default {
-    background-color: #FFFFFFf2;
+    background-color: #fffffff2;
 }
 
 .navbar-default .navbar-nav>.open>a, 
@@ -82,5 +88,5 @@ a.dropdown-toggle:hover {
 .navbar-default .navbar-nav>li>a:hover, 
 a.navbar-brand:hover {
   color: #ffffffab !important;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }

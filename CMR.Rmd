@@ -1,27 +1,32 @@
 ---
-title: "Epidemiology in Humanitarian Settings"
+title: "Crude Mortality Rate in Central African Republic"
 output: 
-  html_document:
-    toc: true
-    toc_float: true
+  html_document
 ---
 
 ### Investigative Methods in Complex Emergencies
-
 From January 1, 2018 to August 21, 2018 (7.7 months), Columbia University and the International Rescue Committee in Ouham-Pende Prefecture in the Central African Republic collected data using the current household census method. The household was defined as those who slept in their “household” last night, and interviewees were asked if anyone sleeping with that household had given birth or died since the start of the year.  The survey was a cluster sample with 30 clusters of 15 households each. Due to a political dispute, only 896 HH were interviewed as one cluster was incomplete. 
 
 The crude mortality rate (CMR) is a good indicator of the severity of a humanitarian situation within a population and monitor the effectiveness of relief. The following formula was used to calculate the estimated CMR in Ouham-Pende Prefecture:
 
-!<image src ="./pix/epi_formula.png" style="width:50%">
+!<image src ="./pix/epi_formula.png" style="width:75%">
 
-CMR that is above 1 death/10,000 population/day is considered to be past the “emergency threshold”, indicating an emergency requiring immediate medical assistance. Since the Ouham-Pende household survey reports a CMR of 4.17/1000/month (95% CI 3.32-5.01), this is equivalent to 1.39 deaths per 10,000 population per day, which is above the emergency threshold. Although the exact causes of mortality are unknown, MSF notes that high CMR in Ouham-Pende is due to multiple factors, including recent conflict and displacement, the massive prevalence of preventable and treatable diseases, and the absence of functioning health system in the country. Further analysis of the survey is recommended to develop a better framework in which to offer health care services in conflict and post-conflict situations. Unaddressed, these issues could further undermine CAR's development and slow its progress toward social reconstruction. 
+CMR that is above 1 death/10,000 population/day is considered to be past the “emergency threshold”, indicating an emergency requiring immediate medical assistance. <b>Since the Ouham-Pende household survey reports a CMR of 4.17/1000/month (95% CI 3.32-5.01), this is equivalent to 1.39 deaths per 10,000 population per day, which is above the emergency threshold.</b> Although the exact causes of mortality are unknown, MSF notes that high CMR in Ouham-Pende is due to multiple factors, including recent conflict and displacement, the massive prevalence of preventable and treatable diseases, and the absence of functioning health system in the country. Further analysis of the survey is recommended to develop a better framework in which to offer health care services in conflict and post-conflict situations. Unaddressed, these issues could further undermine CAR's development and slow its progress toward social reconstruction. 
 
-As can be seen in Graph 1, the World Bank reported the Central African Republic’s CMR of 1.083 deaths/1000 population/ month, and the birth rate of 3 births/1000 population/month in 2017. However, these rates are representative of the country measured during the year, and not representative of the prefecture. The estimates for the Central African Republic are projections based on extrapolations of levels and trends from earlier years or interpolations of population estimates and projections from the UN Population Division.
+<b>Graph 1:</b> Comparison of CMR and CBR between Central African Republic (from The World Bank) and Ouham-Pende Prefecture (from the Household Survey).
+
+![]<image src ="./pix/crude_CMR.png" style="width:75%">
+
+As seen in Graph 1, the World Bank reported the Central African Republic’s CMR of 1.083 deaths/1000 population/ month, and the birth rate of 3 births/1000 population/month in 2017. However, these rates are representative of the country measured during the year, and not representative of the prefecture. The estimates for the Central African Republic are projections based on extrapolations of levels and trends from earlier years or interpolations of population estimates and projections from the UN Population Division.
+
 In lieu of complete vital registers, several limitations are inherent to the household survey. Estimates of CMR may be affected by the sampling errors, imprecision if surveys were done in insecure or unstable settings, involuntary and voluntary response bias (ie, inflated deaths or births are hidden), or underestimated because of survival bias (ie, entire households may have been killed, unaccounted for, or disappeared). Further information on proportionate distribution of the population, comprehensive data on the causes of death, population displacement and natural movements would be helpful for  further analysis.
 
-Graph 1: Comparison of CMR and CBR between Central African Republic (from The World Bank) and Ouham-Pende Prefecture (from the Household Survey).
+### <b>Citations</b>
 
-![]<image src ="./pix/crude_CMR.png" style="width:50%">
+1. Definitions: emergencies. (2014, November 17). Retrieved March 12, 2020, from https://www.who.int/hac/about/definitions/en/
 
+2. Médecins Sans Frontières (2011), “Central African Republic: A State of Silent Crisis”. 
 
+3. Vinck P and P Pham (2011), “Association of exposure to violence and potential traumatic events with self-reported physical and mental health status in the Central African Republic”. Journal of the American Medical Association. 304(5): 544-552. 
 
+4. Death rate and Birth rate, crude (per 1,000 people) - Central African Republic. (n.d.). Retrieved March 12, 2020, from https://data.worldbank.org/indicator/SP.DYN.CDRT.IN?contextual=default&locations=CF

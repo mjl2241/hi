@@ -8,12 +8,12 @@ navbar:
       href: about_me.html
     - text: Writing Samples
       menu:
-      - text: CMR in 
+      - text: Short Epidemiology Report 
         href: CMR.html
-      - text: WASH in Nepal
+      - text: Project Proposal 
         href: SRH.html
-      - text: CMR in 
-        href:
+      - text: Academic Paper 
+        href: Psychosocial.html
     - text: Data Analysis
       menu:
       - text: Instacart Dashboard
@@ -24,8 +24,7 @@ navbar:
       href: http://github.com/mjl2241/
 output:
   html_document:
-    cstheme: cosmo
     highlight: tango
-    s: style.css
-    includes:
+    css: style.css
+    include:
       in_header: header.html
