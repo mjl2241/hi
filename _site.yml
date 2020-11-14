@@ -2,15 +2,30 @@ name: "Yay internet!"
 output_dir: "."
 navbar:
   title: "Michelle Lee 👋🏼 "
+  type: inverse
   right:
-    - text: "About"
+    - text: About
       href: about_me.html
-    - text: "Dashboard"
-      href: dashboard.html
+    - text: Writing Samples
+      menu:
+      - text: CMR in 
+        href: CMR.html
+      - text: WASH in Nepal
+        href: SRH.html
+      - text: CMR in 
+        href:
+    - text: Data Analysis
+      menu:
+      - text: Instacart Dashboard
+        href: dashboard.html
     - icon: fa-envelope fa-lg
       href: mailto:<mishi9399@gmail.com>
     - icon: fa-github fa-lg
       href: http://github.com/mjl2241/
 output:
   html_document:
-  css: style.css
+    cstheme: cosmo
+    highlight: tango
+    s: style.css
+    includes:
+      in_header: header.html

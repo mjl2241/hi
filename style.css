@@ -1,7 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700&display=swap');
+
  /*------------- Whole Document---------------- */
 
+title {
+    font-family: 'Muli';
+    font-size: 20px;
+}
+
 body {
-    font-family: 'Arimo';
-    font-size: 19px;
+    font-family: 'Muli';
+    font-size: 17px;
+}
+
+/* links */
+a { 
+  color: #FF00FF; /*magenta*/
+}
+
+a:hover {
+ color: #8b008b; /* darker magenta when hovering */
+}
+/*----------------ADDING WHITE SPACE-------------*/
+
+.title {
+  margin-top: 2em !important;
+  margin-bottom: 0.75em;
+}
+
+.section h1,
+.section h2, 
+.section h3, 
+.section h4, 
+.section h5 { 
+  padding-top: 3em !important; /*adding so much padding because theme adds a margin-top: -65px by default */
+  margin-bottom: 0.75em;
+}
+
+/* NO TOC on mobile */
+@media screen and (max-width: 767px){
+
+  .col-xs-12.col-sm-4.col-md-3 {
+    display: none;
+  }
+  
+  .top-text {
+    font-size: 25px;
+  }
+
+  .bottom-text {
+    font-size: 40px;
+  }
+  
+  
+}
+
+/*----------------NAVBAR ---------------*/
+.navbar-default {
+    background-color: #FFFFFFf2;
+}
+
+.navbar-default .navbar-nav>.open>a, 
+.navbar-default .navbar-nav>.active>a, 
+a.dropdown-toggle:hover {
+  background-color: #ffffff !important;
+}
+
+/* Dropdown menu color */
+.navbar-default .dropdown-menu {
+  background-color: #FFFFFF;
+}
+
+/* Dropdown menu hover color */
+  .navbar-default .dropdown-menu>li>a:hover {
+    background-color: #fffffff2;
+  }
+
+/* Navbar Links when hovered*/
+.navbar-default .dropdown-menu>.active>a
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav:hover, 
+.navbar-default .navbar-nav>li>a:hover, 
+a.navbar-brand:hover {
+  color: #ffffffab !important;
+  background-color: #FFFFFF;
 }
