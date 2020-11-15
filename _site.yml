@@ -2,8 +2,7 @@ name: "Yay internet!"
 output_dir: "."
 navbar:
   title: "Michelle Lee 👋🏼 "
-  type: inverse
-  right:
+  tyght:
     - text: About
       href: about_me.html
     - text: Writing Samples
@@ -22,9 +21,10 @@ navbar:
       href: mailto:<mishi9399@gmail.com>
     - icon: fa-github fa-lg
       href: http://github.com/mjl2241/
-output:
+  tput:
   html_document:
-    highlight: tango
+    theme: cosmo
     css: style.css
     include:
       in_header: header.html
+    self_contianed: no
