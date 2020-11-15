@@ -78,37 +78,6 @@ a:hover {
  color: #8b008b; /* darker color when hovering */
 }
 
-/*----------------NAVBAR ---------------*/
-.navbar-default {
-    background: #FF00FF;
-}
-
-.navbar-default .navbar-nav>.open>a, 
-.navbar-default .navbar-nav>.active>a, 
-a.dropdown-toggle:hover {
-  background-color: white !important;
-}
-
-/* Dropdown menu color */
-.navbar-default .dropdown-menu {
-  background-color: white;
-}
-
-/* Dropdown menu hover color */
-  .navbar-default .dropdown-menu>li>a:hover {
-    background-color: white;
-  }
-
-/* Navbar Links when hovered*/
-.navbar-default .dropdown-menu>.active>a
-.navbar-default .navbar-nav>.active>a:hover, 
-.navbar-default .navbar-nav:hover, 
-.navbar-default .navbar-nav>li>a:hover, 
-a.navbar-brand:hover {
-  color: white !important;
-  background-color: white;
-}
-
 /*-----------------TOC----------------*/
 
 .tocify {
