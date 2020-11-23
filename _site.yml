@@ -2,12 +2,12 @@ name: "Yay internet!"
 output_dir: "."
 navbar:
   title: "Michelle Lee 👋"
-  tyght:
+  right:
     - text: About
       href: about_me.html
     - text: Writing Samples
       menu:
-      - text: Short Epidemiology Report 
+      - text: Epidemiology Report 
         href: CMR.html
       - text: Project Proposal 
         href: SRH.html
