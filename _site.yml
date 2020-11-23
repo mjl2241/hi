@@ -1,7 +1,7 @@
 name: "Yay internet!"
 output_dir: "."
 navbar:
-  title: "Michelle Lee 👋🏼 "
+  title: "Michelle Lee 👋"
   tyght:
     - text: About
       href: about_me.html
@@ -21,10 +21,8 @@ navbar:
       href: mailto:<mishi9399@gmail.com>
     - icon: fa-github fa-lg
       href: http://github.com/mjl2241/
-  tput:
+output:
   html_document:
-    theme: cosmo
     css: style.css
     include:
       in_header: header.html
-    self_contianed: no
