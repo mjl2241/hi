@@ -72,13 +72,6 @@ a:hover {
 
 /*-----------------TOC----------------*/
 
-.tocify {
-  position: -webkit-sticky;
-  position: sticky; 
-  top: 120px; /*Controls where TOC stops when sticky */
-  width: 100% !important;
-  border: none;
-}
 
    /* TOC links */
 
