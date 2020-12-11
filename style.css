@@ -72,6 +72,13 @@ a:hover {
 
 /*-----------------TOC----------------*/
 
+#TOC {
+  position: fixed;
+  left: 30px;
+  width: 440px;
+  max-width:100%;
+  overflow:auto;
+}
 
    /* TOC links */
 

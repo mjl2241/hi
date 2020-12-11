@@ -5,6 +5,10 @@ navbar:
   right:
     - text: About
       href: about_me.html
+    - text: Data Analysis
+      menu:
+      - text: COVID19 Mobility Trends 
+        href: covid19.html
     - text: Writing Samples
       menu:
       - text: Epidemiology Report 
@@ -13,10 +17,6 @@ navbar:
         href: SRH.html
       - text: Academic Paper 
         href: Psychosocial.html
-    - text: Data Analysis
-      menu:
-      - text: COVID19 Mobility Trends 
-        href: covid19.html
     - icon: fa-envelope fa-lg
       href: mailto:<mishi9399@gmail.com>
     - icon: fa-github fa-lg

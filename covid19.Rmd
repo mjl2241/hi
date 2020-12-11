@@ -10,7 +10,7 @@ output:
 
 *Contributors: Michelle Lee, Julián Ponce, Adarsh Ramakrishnan, Allison Stewart, Aishwarya Anuraj (MPH candidates at Columbia University)*
 
-### Project Motivation
+# Project Motivation
 
 The central artery of New York City, the public transportation system is central to the city's cultural and economic well-being. Among its usual million daily users such as hip hop dancers, Wall Street executives, and the famous [pizzarat](https://www.cnn.com/2015/09/22/living/pizza-rat-feat/index.html), the subway proves to be more than a means of transport; it is a way of life. 
 
@@ -20,13 +20,13 @@ This project moves forward with the aim of understanding the influence of the CO
 
 Understanding this important issue could provide insight to policymakers, transit authorities, and health departments as they make decisions related to transmission of COVID-19 and modifications to public transportation systems in light of stay-at-home orders.
 
-### Research Questions 
+# Research Questions 
 
 * How has the COVID-19 pandemic influenced trends in subway and bus ridership in NYC from March to November 2020? 
 * Does average MTA subway ridership from March to November 2019 differ from MTA subway ridership from March to November 2020?
 * Does subway ridership differ from bus ridership during the COVID-19 pandemic (March to November 2020)?
 
-# Data
+# Mobility Analysis
 
 We used a publicly available [dataset](https://new.mta.info/coronavirus/ridership) on day-by-day ridership numbers  from the MTA. The dataset contains information on total estimated ridership and percentage change from 2019 by day, beginning March 1, 2020. Estimates of ridership by subway, bus (local, limited, SBS, and Express), Long Island Rail Road, Metro-North Railroad, Access-A-Ride, and Bridges and Tunnels are all available, however, we decided to restrict our analysis to subway and bus ridership.   
 
@@ -351,7 +351,7 @@ mta_data %>%
 ggtitle("Residual vs. Predicted value of Subway 2020 Ridership Regression Model")
 ```
 
-### Results
+# Results
 * __Subway__
   * For each additional change in month, we expect subway ridership to increase by 32,473 units, on average.
 
