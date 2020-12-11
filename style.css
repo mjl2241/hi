@@ -75,7 +75,7 @@ a:hover {
 #TOC {
   position: fixed;
   left: 30px;
-  width: 440px;
+  width: 220px;
   max-width:100%;
   overflow:auto;
 }
