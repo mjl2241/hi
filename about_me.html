@@ -13,20 +13,25 @@
 
 <title>about me 🧑🏻</title>
 
+<script src="site_libs/header-attrs-2.9/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
   <link rel="icon" type="image/png" href="./apple-touch-icon.png"/>
@@ -41,11 +46,6 @@
     </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -58,32 +58,7 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 
@@ -94,10 +69,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -114,40 +85,13 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -175,7 +119,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -187,7 +131,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -198,10 +142,23 @@ $(document).ready(function () {
   var menuAnchor = $('a[href="' + href + '"]');
 
   // mark it active
-  menuAnchor.parent().addClass('active');
+  menuAnchor.tab('show');
 
   // if it's got a parent navbar menu mark it active as well
   menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -213,7 +170,6 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
@@ -266,69 +222,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-
 
 </head>
 
@@ -336,16 +229,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -366,15 +249,27 @@ div.tocify {
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="about_me.html">About</a>
+  <a href="CV.html">CV</a>
+</li>
+<li>
+  <a href="publications.html">publications</a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Data Analysis
+    projects
      
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="dssg.html">data science for social good</a>
+    </li>
+    <li>
+      <a href="ml_epi.html">machine learning in epidemiology</a>
+    </li>
+    <li>
+      <a href="stroke_pred.html">stroke prediction</a>
+    </li>
     <li>
       <a href="covid19.html">COVID19 Mobility Trends</a>
     </li>
@@ -388,13 +283,19 @@ div.tocify {
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="CMR.html">Epidemiology Report</a>
+      <a href="Psychosocial.html">academic paper</a>
     </li>
     <li>
-      <a href="SRH.html">Project Proposal</a>
+      <a href="digital_surv.html">digital surveillance report</a>
     </li>
     <li>
-      <a href="Psychosocial.html">Academic Paper</a>
+      <a href="human_rights.html">human rights policy review</a>
+    </li>
+    <li>
+      <a href="CMR.html">epidemiology report</a>
+    </li>
+    <li>
+      <a href="SRH.html">project proposal</a>
     </li>
   </ul>
 </li>
@@ -415,7 +316,7 @@ div.tocify {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -424,56 +325,13 @@ div.tocify {
 </div>
 
 
-<div id="education" class="section level3">
-<h3>Education</h3>
-<p><strong>Columbia University</strong><br />
-Master of Public Health (MPH) New York, NY | Class of 2021<br />
-Department of Population and Family, Certificate: Applied Biostatistics<br />
-▪ Academic projects: COVID-19 Mobility Trends in NYC, Sexual Reproductive Health in Humanitarian settings, Analysis of Crude Mortality Rate in Central Africa<br />
-▪ Relevant coursework: Statistics, Data Science, Machine Learning, Sexual Reproductive Health in Humanitarian Settings, Investigative Methods in Complex Emergencies, Data Analysis/Analytics</p>
-<p><strong>Wesleyan University</strong><br />
-Middletown, CT | Class of 2016<br />
-Bachelor of Arts: Biology, Philosophy<br />
-Certificate in Critical Theory</p>
-</div>
-<div id="awards" class="section level3">
-<h3>Awards</h3>
-<p><strong>GATES MILLENNIUM SCHOLARSHIP</strong>, Bill and Miranda Gates Foundation 2012 - current<br />
-<strong>DEAN’S LIST</strong>, Wesleyan University Spring 2016<br />
-<strong>DEAN’S SCHOLARSHIP</strong>, Columbia University 2019 - current</p>
-</div>
-<div id="work-experience" class="section level3">
-<h3>Work Experience</h3>
-<p><strong>UX Research Coordinator</strong><br />
-Sonic Sensory INC. | Los Angeles, CA | 02/2018 - 07/2019<br />
-Assisted with user research tests, focus groups, interviews of at least 100 participants to test beta products, and mobile apps. Reviewed methodologies, content analysis, and qualitative data analysis. Prepared and presented findings on a regular basis, and collaborate with UX Researchers and Design Operations to plan a long-term roadmap of research tasks and product development. Maintained a comprehensive database of at least 300 past research participants, plans, and findings.</p>
-<p><strong>Asian and Pacific Islander (API) Outreach Law Clerk</strong><br />
-The Legal Aid Foundation of Los Angeles | Los Angeles, CA | 01/2017 - 01/2018<br />
-Referred at least 3-5 clients per week of API individuals who experienced domestic violence, sexual assault, trafficking, and other related gender-based violence to trauma-informed therapists, social workers, and legal representation to file restriction orders and other related legal referrals. Connected low-income API individuals and families to legal services in housing, immigration, employment, family law, and social services.</p>
-<p><strong>Title IX and Gender Resource Center Intern</strong><br />
-Wesleyan University. Middletown, CT | 08/2014 - 05/2016<br />
-Spearheaded the writing process of a 50-page proposal to create alternative spaces for survivors of gender violence on campus by collecting research information from other NESCAC schools. Referred victims of gender violence to appropriate trauma-informed counseling and legal services. Programmed bi-weekly, campus-wide events on gender equity, and coordinated meetings for student leaders and administrators about Title IX status at Wesleyan.</p>
-</div>
-<div id="leadership-experience" class="section level3">
-<h3>Leadership Experience</h3>
-<p><strong>President</strong>, Graduate Students Association, Columbia University 2019 - current<br />
-<strong>Treasurer</strong>, Humanitarian Organization for Migration and Emergencies 2019 - current</p>
-</div>
-<div id="skills-interests" class="section level3">
-<h3>Skills &amp; Interests</h3>
-<p>Computer Languages: Python, R, SAS, SPSS<br />
-Software/Programs: MS Office (Word, Excel, PowerPoint), Airtable, Mailchimp, Calendly, Docusign, Box, Jira, Confluence<br />
-Languages: Fluent Korean, Nepali, English</p>
-<p><a href="https://www.linkedin.com/in/micjlee/">linkedin</a><br />
+<p><image src ="./pix/grad_photos.jpg" style="width:50%"> <a href="https://www.linkedin.com/in/micjlee/">linkedin</a><br />
 <a href="https://github.com/mjl2241/public_projects.git">github</a><br />
-<a href="mailto:%3Cmishi9399@gmail.com%3E">contact</a></p>
-<p>[]<image src ="./pix/grad_photos.jpg" style="width:50%"></p>
-</div>
+<a href="mailto:%3Cmjl2241@cumc.columbia.edu%3E">contact</a></p>
+<p><a href="https://github.com/mjl2241/website/blob/main/LeeMJ_CV_Nov2021.pdf" target="_blank">PDF.</a></p>
 
 
 
-</div>
-</div>
 
 </div>
 
@@ -499,39 +357,13 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

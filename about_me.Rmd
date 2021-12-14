@@ -1,52 +1,12 @@
 ---
 title: "about me 🧑🏻"
-output: 
+output:
   html_document:
     toc: true
-    toc_float: true
 ---
-  
-### Education
-**Columbia University**  
-Master of Public Health (MPH)  New York, NY | Class of 2021  
-Department of Population and Family, Certificate: Applied Biostatistics  
-▪ Academic projects: COVID-19 Mobility Trends in NYC, Sexual Reproductive Health in Humanitarian settings, Analysis of Crude Mortality Rate in Central Africa  
-▪ Relevant coursework: Statistics, Data Science, Machine Learning, Sexual Reproductive Health in Humanitarian Settings, Investigative Methods in Complex Emergencies, Data Analysis/Analytics
-
-**Wesleyan University**  
-Middletown, CT | Class of 2016  
-Bachelor of Arts: Biology, Philosophy  
-Certificate in Critical Theory  
-
-### Awards
-**GATES MILLENNIUM SCHOLARSHIP**, Bill and Miranda Gates Foundation	2012 - current  
-**DEAN’S LIST**, Wesleyan University 	Spring 2016   
-**DEAN’S SCHOLARSHIP**, Columbia University	2019 - current  
-
-### Work Experience 
-**UX Research Coordinator**  
-Sonic Sensory INC. | Los Angeles, CA | 02/2018 - 07/2019  
-Assisted with user research tests, focus groups, interviews of at least 100 participants to test beta products, and mobile apps. Reviewed methodologies, content analysis, and qualitative data analysis. Prepared and presented findings on a regular basis, and collaborate with UX Researchers and Design Operations to plan a long-term roadmap of research tasks and product development. Maintained a comprehensive database of at least 300 past research participants, plans, and findings.  
-
-**Asian and Pacific Islander (API) Outreach Law Clerk**  
-The Legal Aid Foundation of Los Angeles | Los Angeles, CA | 01/2017 - 01/2018  
-Referred at least 3-5 clients per week of API individuals who experienced domestic violence, sexual assault, trafficking, and other related gender-based violence to trauma-informed therapists, social workers, and legal representation to file restriction orders and other related legal referrals. Connected low-income API individuals and families to legal services in housing, immigration, employment, family law, and social services.   
-
-**Title IX and Gender Resource Center Intern**  
-Wesleyan University.	Middletown, CT | 08/2014 - 05/2016  
-Spearheaded the writing process of a 50-page proposal to create alternative spaces for survivors of gender violence on campus by collecting research information from other NESCAC schools. Referred victims of gender violence to appropriate trauma-informed counseling and legal services. Programmed bi-weekly, campus-wide events on gender equity, and coordinated meetings for student leaders and administrators about Title IX status at Wesleyan.   
-
-### Leadership Experience
-**President**, Graduate Students Association, Columbia University	2019 - current  
-**Treasurer**, Humanitarian Organization for Migration and Emergencies	2019 - current  
-
-### Skills & Interests
-Computer Languages: Python, R, SAS, SPSS  
-Software/Programs: MS Office (Word, Excel, PowerPoint), Airtable, Mailchimp, Calendly, Docusign, Box, Jira, Confluence  
-Languages: Fluent Korean, Nepali, English  
-
+<image src ="./pix/grad_photos.jpg" style="width:50%"> 
 [linkedin](https://www.linkedin.com/in/micjlee/)  
 [github](https://github.com/mjl2241/public_projects.git)  
-[contact](mailto:<mishi9399@gmail.com>)  
+[contact](mailto:<mjl2241@cumc.columbia.edu>)
 
-![]<image src ="./pix/grad_photos.jpg" style="width:50%"> 
+<a href="https://github.com/mjl2241/website/blob/main/LeeMJ_CV_Nov2021.pdf" target="_blank">PDF.</a>

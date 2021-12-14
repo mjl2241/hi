@@ -1,0 +1,257 @@
+---
+title: "Final Project"
+author: "Michelle Lee_mjl2241"
+date: "4/15/2021"
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+### Part 1: Dietary patterns using unsupervised analysis 
+As part of a birth cohort study, researchers have collected dietary data during pregnancy and then postnatally for children at age 3 or 4 years. Both dietary intake for the mother during pregnancy and the child postnatally are included in the available dataset, for a total of 27 features. There is a good deal of research on dietary patterns as an important component when considering childhood health. You are interested in determining if there is evidence of dietary patterns within the data that could potentially inform future research within the birth cohort. 
+
+Question 1: Construct a research question that would motivate your unsupervised analysis. The output of the unsupervised analysis can be used as an exposure, outcome, covariate, matching factor or stratification variable. State what type of research question it is: descriptive, explanatory or predictive.
+
+I will use prenatal and childhood diet to explore dietary patterns within the data. This is an exploratory research question.
+
+Question 2: Run an appropriate unsupervised learning analysis that will address your specific research question. Your analysis should include a data-driven approach to determine the optimal number of outputs that are retained/produced by the chosen learning technique. 
+
+I will attempt to uncover dietary patterns within prenatal and childhood data. Identifying these patterns can allow future researchers to conduct more targeted investigations of various childhood health (obesity, asthma, intellectual scores). 
+
+```{r message=FALSE, warning=FALSE}
+library(cluster)
+library(factoextra)
+library(tidyverse)
+library(caret)
+library(Amelia)
+library(Metrics)
+library(ggbiplot)
+library(stats)
+library(lattice)
+library(dplyr)
+library(randomForest)
+library(rpart.plot)
+library(corrplot)
+library(Hmisc)
+```
+##### Step 1: Clean Data and Partition
+```{r}
+### Step 1: Load and Prepare Dataset
+diet.data =  read.csv("./diet_data.csv")  %>% janitor::clean_names()
+
+#Strip off ID Variable
+diet.data$ID<-NULL
+str(diet.data)
+missmap(diet.data) #no missing variables
+
+#scale continuous variables within
+colMeans(diet.data, na.rm=TRUE)
+diet.scaled <- scale(diet.data)
+```
+There are 1301 observations with 29 variables and no missing rows.
+
+##### Step 2: Conduct a clustering analysis using k-means clustering
+We can use the kmeans function in order to identify clusters within the data.
+```{r}
+set.seed(100)
+clusters<-kmeans(diet.scaled , 5, nstart=25)
+str(clusters)
+fviz_cluster(clusters, data=diet.scaled)
+#Show the mean value of features within each cluster
+clusters$centers
+
+#setting centers to another value
+clusters2<-kmeans(diet.scaled , 9, nstart=25)
+str(clusters2)
+fviz_cluster(clusters2, data=diet.scaled)
+#Show the mean value of features within each cluster
+clusters2$centers
+
+#Conduct a gap_statistic analysis to determine optimal number of clusters
+set.seed(123)
+gap_stat<-clusGap(diet.scaled, FUN=kmeans, nstart=25, K.max=9, B=50)
+print(gap_stat, method="firstmax")
+fviz_gap_stat(gap_stat)
+```
+We can visualize the results with fviz_gap_stat which suggests 6 clusters as the optimal number of clusters. We can perform the final analysis and extract the results using 6 clusters.
+
+```{r}
+clusters.6<-kmeans(diet.scaled, 6, nstart=25)
+print(clusters.6)
+fviz_cluster(clusters.6, data=diet.scaled)
+```
+##### Step 3: Conduct a hierarchical clustering analysis
+Using the scaled dataset on diet, I will identify clusters using hierarchical analysis. I will use an Euclidian distance measure to construct the dissimilary matrix and use an agglomerative algorithm for hierarchical clustering.
+
+```{r}
+# Create Dissimilarity matrix
+diss.matrix <- dist(diet.scaled, method = "euclidean")
+# Hierarchical clustering using Complete Linkage
+clusters.h<- hclust(diss.matrix, method = "complete" )
+# Plot the obtained dendrogram
+plot(clusters.h, cex = 0.6, hang = -1)
+
+#create function to use within clusGap using complete
+hclusCut <- function(x, k) list(cluster = cutree(hclust(dist(x, method="euclidian"), method="complete"), k=k))
+gap_stat3 <- clusGap(diet.scaled, FUN = hclusCut, K.max = 10, B = 50)
+fviz_gap_stat(gap_stat3)
+```
+Using the complete method suggests 4 is the optimal number of clusters. 
+```{r}
+#Use number of clusters from gap statistic to obtain cluster assignment for each observation
+clusters.h.4<-cutree(clusters.h, k=4)
+table(clusters.h.4)
+aggregate(diet.scaled,list(clusters.h.4),mean)
+```
+
+Question 3: Describe the outputs of the analysis in terms of their composition of the input features. 
+
+Using the complete method of hierarchical anlaysis uggests 4 is the optimal number of clusters. When using 4 as the optimal number of clusters, each cluster contains (1) 545, (2) 102, (3) 372, and (4) 282 observations.
+ 
+### Part 2: Choose your own supervised adventure
+For this part, you will create your own research question and implement an analytic pipeline that is consistent with the goal of the research question. At minimum, you must:
+
+- Implement an appropriate data-driven analytic pipeline to address your specific question
+- Compare two supervised algorithms to determine the optimal model.
+- Tune hyperparameters across a broad range of values (not just package defaults)
+- Validate, evaluate and/or interpret your final model in a way that is appropriate for your research question
+- Describe one potential ethical or scientific limitation of your analysis.
+
+#### RQ: Construct a risk score for childhood asthma to determine eligibility for medical assistance intervention programs targeting high-risk children for asthma. 
+
+To address this question, I will compare the accuracy of random forest and logistic regression models to generate a clinical risk score for asthma. 
+
+```{r}
+#Merge all data frames into a single data frame. 
+#Load data using path of where file is stored
+load("./exposome.RData")
+studydata<-merge(exposome,phenotype,by="ID") %>% merge(covariates, by="ID") %>% janitor::clean_names()
+
+#Strip off ID Variable
+studydata$ID<-NULL
+```
+There are 1301 observations and 242 columns.
+
+```{r message=FALSE, warning=FALSE, results=FALSE}
+#missingness
+summary(studydata)
+#change dependent variable to factor
+studydata$hs_asthma = as.factor(studydata$hs_asthma)
+#data are unbalanced
+table(studydata$hs_asthma)
+```
+There are no missing rows.
+Selected outcome from phenotype: asthmas status.
+There is an imbalance of dataset, 1158 no case and 142 of asthma cases, which will be addressed by upsampling.
+
+##### Set up: Partition data into training/testing
+```{r}
+set.seed(100)
+train.indices<-createDataPartition(y=studydata$hs_asthma,p=0.7,list=FALSE)
+train.data<-studydata[train.indices, ]
+test.data<-studydata[-train.indices, ]
+```
+
+##### Model 1: Random Forest with 3 values of mtry and 3 values of ntree
+```{r}
+# Try mtry of all, half of all, sqrt of all, 
+# Try ntree of 100, 300, 500
+feat.count<-c((ncol(train.data)-1), (ncol(train.data)-1)/2, sqrt(ncol(train.data)-1))
+grid.rf<-expand.grid(mtry=feat.count)
+control.obj<-trainControl(method="cv", number=10, sampling="up") #imbalance of data
+tree.num<-seq(100,500, by=200)
+results.trees<-list()
+for (ntree in tree.num){
+  set.seed(100)
+    rf.asthma<-train(hs_asthma~., 
+                     data=train.data, 
+                     method="rf", 
+                     trControl=control.obj, 
+                     metric="Accuracy", 
+                     tuneGrid=grid.rf, 
+                     importance=TRUE, ntree=ntree)
+    index<-toString(ntree)
+  results.trees[[index]]<-rf.asthma$results
+}
+
+output.asthma<-bind_rows(results.trees, .id = "ntrees")
+best.tune<-output.asthma[which.max(output.asthma[,"Accuracy"]),]
+best.tune$mtry
+mtry.grid<-expand.grid(.mtry=best.tune$mtry)
+
+set.seed(123)
+rf.asthma.final<-train(hs_asthma~.,
+                    data=train.data, 
+                    method="rf", 
+                    trControl=control.obj, 
+                    metric="Accuracy", 
+                    tuneGrid=mtry.grid, 
+                    importance=TRUE, 
+                    ntree=as.numeric(best.tune$ntrees))
+confusionMatrix(rf.asthma.final)
+varImp(rf.asthma.final)
+varImpPlot(rf.asthma.final$finalModel)
+```
+The rf model suggest best tune mtry is 15.52 with the accuracy of 0.890. However, the confusion matrix shows that there are 0 for the references, indicating that the accuracy could be high due to lack of cases in the reference group. In the final rf model, the important variables are hs_dmtp_cadj_log2,hs_cd_m_log2, h_builtdens300_preg_sqrt,hs_pbde153_cadj_log2	, hs_dmtp_madj_log2, hs_detp_madj_log2. 
+
+##### Model 2: Logistic Regression
+```{r}
+set.seed(123)
+control.obj<-trainControl(method="cv", number=10, sampling="up")
+logit.asthma<-train(hs_asthma~., 
+                    data=train.data, 
+                    method="glm", 
+                    family="binomial",
+                    preProcess=c("center", "scale"), 
+                    trControl=control.obj)
+logit.asthma$results
+confusionMatrix(logit.asthma)
+coef(logit.asthma$finalModel)
+varImp(logit.asthma)
+```
+The logistic regression model suggests the accuracy of 0.7445, which is lower than that of the rf model. However, the confusion matrix shows more balanced distribution of case and noncases for both reference and prediction. The important variables are h_age_none, hs_trafload_h_pow1over3, hs_accesspoints300_s_log, hs_readymade_ter(0.5,Inf], hs_accesspoints300_h_log,hs_cd_m_log2.
+
+##### Output predicted probabilities from each of the two models applied within the testing set. 
+```{r}
+#Predict in test-set and output probabilities
+rf.probs<-predict(rf.asthma.final, test.data, type="prob")
+
+#Pull out predicted probabilities for asthma=yes
+rf.pp<-rf.probs[,2]
+
+#Predict in test-set using response type
+logit.probs<-predict(logit.asthma, test.data, type="prob")
+logit.pp<-logit.probs[,2]
+```
+
+##### Plot and compare calibration curves across the two algorithms. 
+```{r}
+pred.prob<-data.frame(Class=test.data$hs_asthma, logit=logit.pp, rf=rf.pp)
+calplot<-(calibration(Class ~ logit+rf, data=pred.prob, class="1", cuts=10))
+xyplot(calplot, auto.key=list(columns=3))
+```
+Based on calibration curves across the two models, rf model performs better than the logistic regression model. Since the random forest model has higher accuracy (0.890) and performs better on the calibration curve, we will choose the random forest model. 
+
+One potential scientific limitation is that I included both prenatal and postnatal information of the mother and child in this analysis, and I am unsure if either prenatal or postnatal information affects a child's likelihood of asthma diagnosis. Future analysis can determine if there are particular combinations of exposures ("cocktail effect") and also control for potential confounders. 
+
+### Part 3: Ethical considerations of data-driven analyses in social epidemiology
+##### Question 1: Within this class, we have referred to numerous articles that have coupled social media data with machine learning algorithms to address an epidemiologic research question. Choose any one article that was presented in slides, in discussion boards, in class or find your own example on PubMed. List the citation of the paper and describe briefly whether you think the analyses were successful in supporting early detection and treatment and/or in the design of interventions. (Again, doesn’t need to be focused on mental health.) Specifically, consider:
+- the quality of the analysis
+- whether appropriate details of the methodology and results were reported in the paper
+- whether the analysis was subject to any biases that would hinder our ability to draw - conclusions and successfully inform clinical or public health practice. 
+
+citation: De Choudhury M, Gamon M, Counts S, Horvitz E. 2013. Predicting depression via social media. Proc. Int. AAAI Conf. Weblogs Soc. Media (ICWSM), 7th, Boston, pp. 128–37. Palo Alto, CA: Assoc. Adv. Artif. Intell. (AAAI)
+
+The article by De Choudhury used supervised learning to construct classifiers to predict depression based on Twitter posts and crowdsourcing. I chose this article because predicting major depression would be useful in identifying people who are at risk of depression and offer them mental health resources and support, especially for people who are hesitant to seek help themselves. The study was consent-oriented, as crowd workers were asked to take a standardized clinical depression survey and they could opt in to share their Twitter usernames with an agreement that their data could be mined and analyzed anonymously. However, this could have raised concerns about sample bias, as the crowd workers knew that this survey was about a clinical depression survey and not a general survey. Furthermore, while social media is ubiquitous, the study assumes the relationship between people who are depressed and Twitter use, and the data on people who are depressed but are not active on Twitter are excluded, such as population with limited access to the internet, younger and older populations. 
+The study included detailed methodology, including measurement of behavioral attributes via social engagement, insomnia index (activity at night), egocentric social graph, emotion, depression language, and antidepressant medications mentions, which all seemed sufficient for the analysis and were comparable to other relevant studies. Furthermore, the study used principal component analysis to avoid overfitting and found that the Support Vector Machine classifier was the best performing classifier. 
+Physicians and mental health specialists can use this model in addition to their traditional clinical tools to better and accurately diagnose people who are at risk of depression. As people might not be completely honest during their early therapy sessions, clinicians can use Twitter as a tool to help them better understand their patients and diagnose with major depression in individuals to engage with patient behavior outside of therapy/clinical sessions. 
+
+##### Question 2: Within the substantive field of your selected paper, describe one potential risk to either individuals, communities or specific populations that could arise from research or public health practice that utilizes data-driven analyses of social-media data for research. 
+Once models become more accurate in predicting the depression stage, it raises the question whether social media platforms should monitor mental health states of its users. The advocates would eagerly agree that these platforms, as long as consumers provide consent and agree to have their data used for analysis, should monitor and use public posts made on social media to intervene to help identify someone in depression or at risk of suicide and help save someone’s life. On the otherhand, others are concerns that these data-driven analyses are inherently biased and will do more harm to marginalized communities who are already disadvantaged by the rise of technology, such as selling their data or excluding them from intervention programs to provide mental health resources and support. We risk that data and insights could be further resold to advertisers and private health solutions to target users who are flagged with mental health issues, and corporations could influence user behavior to their advantage. However, another ethical and moral question arises, in which should the social media platform just watch and not intervene, in order to protect user’s data privacy, while the users show signs of depression and risky behaviors? 
+
+##### Question 3: Describe one potential safeguard that could be implemented to prevent the risk you describe in Question 2.
+
+It is difficult to know how people will react if social media companies came forth that they will monitor user posts and will conduct health checks on their platforms. Will people feel like they are being watched and delete their account? Or will they feel safer and seek help? These questions should be addressed by social media companies. One potential safeguard is that social media companies can liaison with local public health organizations to promote independent research that uses the data for social good, and be more critical of biases embedded in the data and model to solve public health questions, including improving the mental health of social media users. 

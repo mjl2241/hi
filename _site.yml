@@ -1,26 +1,39 @@
-name: "Yay internet!"
+name: "Michelle Website"
 output_dir: "."
 navbar:
   title: "Michelle Lee 👋"
   right:
-    - text: About
-      href: about_me.html
-    - text: Data Analysis
+    - text: CV
+      href: CV.html
+    - text: publications 
+      href: publications.html
+    - text: projects
       menu:
+      - text: data science for social good
+        href: dssg.html
+      - text: machine learning in epidemiology
+        href: ml_epi.html
+      - text: stroke prediction
+        href: stroke_pred.html
       - text: COVID19 Mobility Trends 
         href: covid19.html
     - text: Writing Samples
       menu:
-      - text: Epidemiology Report 
-        href: CMR.html
-      - text: Project Proposal 
-        href: SRH.html
-      - text: Academic Paper 
+      - text: academic paper 
         href: Psychosocial.html
+      - text: digital surveillance report 
+        href: digital_surv.html
+      - text: human rights policy review 
+        href: human_rights.html
+      - text: epidemiology report 
+        href: CMR.html
+      - text: project proposal
+        href: SRH.html
     - icon: fa-envelope fa-lg
       href: mailto:<mishi9399@gmail.com>
     - icon: fa-github fa-lg
       href: http://github.com/mjl2241/
+
 output:
   html_document:
     css: style.css
