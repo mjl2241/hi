@@ -4,7 +4,7 @@ navbar:
   title: "Michelle Lee 🧑🏻"👋"
   right:
     - text: CV
-      href: about_me.html
+      href: CV.html
     - text: publications 
       href: publications.html
     - text: projects
@@ -17,7 +17,7 @@ navbar:
         href: stroke_pred.html
       - text: COVID19 Mobility Trends 
         href: covid19.html
-    - text: Writing Samples
+    - text: writing samples
       menu:
       - text: academic paper 
         href: Psychosocial.html
