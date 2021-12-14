@@ -9,4 +9,4 @@ output:
 [github](https://github.com/mjl2241/public_projects.git)  
 [contact](mailto:<mjl2241@cumc.columbia.edu>)
 
-<a href="https://github.com/mjl2241/website/blob/main/LeeMJ_CV_Nov2021.pdf" target="_blank">PDF.</a>
+<embed src ="https://mjl2241.github.io/website/LeeMJ_CV_Nov2021.pdf" type="application/pdf" />
