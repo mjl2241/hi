@@ -4,6 +4,5 @@ output:
   html_document:
     toc: true
 ---
-[linkedin](https://www.linkedin.com/in/micjlee/)     [github](https://github.com/mjl2241/public_projects.git)    [email](mailto:<mjl2241@cumc.columbia.edu>)
 
-<embed src ="https://mjl2241.github.io/website/LeeMJ_CV_Nov2021.pdf" type="application/pdf" style = "width:100%">
+<embed src ="https://mjl2241.github.io/hi/LeeMJ_CV_Nov2021.pdf" type="application/pdf" style = "width:100%">
