@@ -38,4 +38,4 @@ output:
   html_document:
     css: style.css
     include:
-      in_header: header.html
+      in_header: index.html

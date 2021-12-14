@@ -3,9 +3,11 @@ title: ""
 output: 
       html_document
 ---
-<image src = "./pix/grad.jpg" style="float:left;margin-right:20px; margin-top: 20px;margin-left:10px;width:40%">
+<image src = "./pix/grad.jpg" style="float:right;margin-right:20px; margin-top: 20px;margin-left:10px;width:40%">
 
-I recently graduated with a Master's in Public Health from the department of Population and Family Health at Columbia University Mailman School of Public Health. I am interested in data-driven responses to humanitarian crises and using large-scale data to reduce adverse health outcomes among populations affected by conflict and natural disasters. Specifically, I wonder how machine learning and artificial intelligence techniques can be responsibly used in humanitarian action and low-resourced settings for efficient crisis response, mobilization, and implementation. I am passionate about critically thinking about statistical analysis, bias in models, and how to improve these models to better advance the interest of communities that are already marginalized by advancement in technology, including migrants and refugees. 
+I received a Master's in Public Health from the department of [Population and Family Health at Columbia University Mailman School of Public Health](https://www.publichealth.columbia.edu/academics/departments/population-family-health). 
+
+My research area is on data-driven responses to humanitarian crises and using large-scale data to reduce adverse health outcomes among populations affected by conflict and natural disasters. Specifically, I wonder how machine learning and artificial intelligence techniques can be responsibly used in humanitarian action and low-resourced settings for efficient crisis response, mobilization, and implementation. I am passionate about critically thinking about statistical analysis, bias in models, and how to improve these models to better advance the interest of communities that are already marginalized by advancement in technology, including migrants and refugees. 
 
 Building on my strong foundation in humanitarianism and data science, I am currently working as a junior data analyst at the Center for the Study of Asian American Health at New York University, with Dr. Stella Yi. Prior to coming to Columbia University, I worked as a UX researcher at a tech start-up in Los Angeles and studied Science in Society (Philosophy and Biology) at Wesleyan University. 
 
