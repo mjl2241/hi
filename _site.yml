@@ -1,7 +1,7 @@
 name: "Michelle Website"
 output_dir: "."
 navbar:
-  title: "Michelle Lee 👋"
+  title: "Michelle Lee 🧑🏻"👋"
   right:
     - text: CV
       href: about_me.html
