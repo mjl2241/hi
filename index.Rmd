@@ -3,12 +3,14 @@ title: ""
 output: 
       html_document
 ---
-<image src = "./pix/home_photo.jpg" style="float:left;margin-right:20px; margin-top: 20px;margin-left:10px;width:25%">
+<image src = "./pix/grad.jpg" style="float:left;margin-right:20px; margin-top: 20px;margin-left:10px;width:40%">
 
-I recently graduated with a Master's in Public Health from Columbia University Mailman School of Public Health (Department of Population and Family Health). I am interested in social inequities, health, and technology. Taking a health justice approach, the primary focus of my research is on the exploration of data-driven responses to humanitarian crises and using large scale data to reduce adverse health outcomes among socially marginalized communities. Particularly, I am interested in using machine learning methods to improve mental health and sexuality and gender-based concerns of refugees and migrants, driven by socially responsible use of data and bias reduction. Building on my strong foundation in humanitarianism and data science, I am currently working as a junior data analyst at the Center for the Study of Asian American Health at New York University, with Dr. Stella Yi.
+I recently graduated with a Master's in Public Health from the department of Population and Family Health at Columbia University Mailman School of Public Health. I am interested in data-driven responses to humanitarian crises and using large-scale data to reduce adverse health outcomes among populations affected by conflict and natural disasters. Specifically, I wonder how machine learning and artificial intelligence techniques can be responsibly used in humanitarian action and low-resourced settings for efficient crisis response, mobilization, and implementation. I am passionate about critically thinking about statistical analysis, bias in models, and how to improve these models to better advance the interest of communities that are already marginalized by advancement in technology, including migrants and refugees. 
 
-My long term goal is to work in academia or a faculty position at a research university and a meaningful research career in the long term.explore the potential for Artificial Intelligence and advanced technologies to fill the gaps in humanitarian aid settings. Prior to coming to Columbia University, I worked as a UX researcher in Los Angeles, California and studied Philosophy and Biology at Wesleyan University. 
+Building on my strong foundation in humanitarianism and data science, I am currently working as a junior data analyst at the Center for the Study of Asian American Health at New York University, with Dr. Stella Yi. Prior to coming to Columbia University, I worked as a UX researcher at a tech start-up in Los Angeles and studied Science in Society (Philosophy and Biology) at Wesleyan University. 
 
 My important values are **integrity, transparency, and generosity**, which I try to uphold and live by everyday. My personal life goal is to be a positive influence in my community and uphold strong moral values. 
 
-[linkedin](https://www.linkedin.com/in/micjlee/)     [github](https://github.com/mjl2241/public_projects.git)    [email](mailto:<mjl2241@cumc.columbia.edu>)
+[linkedin](https://www.linkedin.com/in/micjlee/)     
+[github](https://github.com/mjl2241/public_projects.git)    
+[email](mailto:<mjl2241@cumc.columbia.edu>)

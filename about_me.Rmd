@@ -1,8 +1,0 @@
----
-title:
-output:
-  html_document:
-    toc: true
----
-
-<embed src ="https://mjl2241.github.io/website/LeeMJ_CV_Nov2021.pdf" type="application/pdf" />
