@@ -1,7 +1,6 @@
 ---
 output:
-  html_document:
-    toc: yes
+  html_document
 ---
 
 ### Publications
@@ -17,10 +16,11 @@ For a full list, please visit my [google scholar page](https://scholar.google.co
    <summary>abstract</summary>
 Long-lasting social distancing measures raise serious concerns for already socially marginalized communities or at high-risk of mental disorders, including senior citizens who live alone, people with disabilities, and low-income families. Given the media's daily role and exposures in meaning-making, media analysis is a useful approach to understanding patterns in reporting trends and popular topics in public discourse. It is critical for policymakers and public health officials to understand what common topics about marginalized communities are being discussed in the news to identify welfare blind-spots. The goal of the study is to investigate reporting trends and identify topics in the news about depression among vulnerable populations in South Korea, shortly before and during COVID-19 through the latent Dirichlet allocation (LDA) topic modeling method. We collected Korean news articles related to mental health and marginalized communities between January 20, 2019, and January 20, 2021, on the BigKinds database. We used R software for LDA topic modeling and visualized the models through multidimensional scaling to identify overlapping topics and group them under common themes. We identified 412 news reports between January 20, 2019, to January 20, 2021. Results showed that the number of articles related to depression and vulnerable populations increased by three-folds during the COVID-19 pandemic (n=306) between January 21, 2020, and January 20, 2021, compared to articles from 2019 (n=106). In 2020, new top themes emerged, including ‘Theme 1: social welfare programs (therapy support, mask donations) for marginalized communities” (N= 114, 37.25%), “Theme 2: social welfare programs for senior citizens and suicide prevention programs” (N= 72, 23.53%), and “Theme 3: mental health during COVID-19” (N=60, 19.61%). Future studies can examine the relationship between news media and its effect on policy development, as well as critical discourse analysis and sentiment analysis of news articles.   
   </details> 
+<br>
 
+1. **Lee MJ**. Media influence on humanitarian interventions: analysis of the Rohingya refugee crisis and international media coverage. *Int J Humanitarian Action* 6 2021 (20). DOI: 10.1186/s41018-021- 00108-5
 
-
-1. [**Lee MJ**. Media influence on humanitarian interventions: analysis of the Rohingya refugee crisis and international media coverage. *Int J Humanitarian Action* 6 2021 (20). DOI: 10.1186/s41018-021- 00108-5](https://jhumanitarianaction.springeropen.com/articles/10.1186/s41018-021-00108-5)
+[link to article](https://jhumanitarianaction.springeropen.com/articles/10.1186/s41018-021-00108-5)
 
   <details>
    <summary>abstract</summary>
