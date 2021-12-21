@@ -1,10 +1,8 @@
 ---
-title: "Final Project"
-author: "Michelle Lee_mjl2241"
-date: "4/15/2021"
+title: "Dietary patterns using unsupervised analysis "
 output:
-  word_document: default
-  html_document: default
+  html_document: 
+    toc: true
 ---
 
 ```{r setup, include=FALSE}
