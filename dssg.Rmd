@@ -4,18 +4,3 @@ output:
   html_document:
     toc: true
 ---
-
-google scholar <link>
-
-3. Lee MJ, Lee SY. Labor rights and human rights in the United States: Topic modeling of the news media. *In review.*
-
-pdf
-
-2. Lee MJ. Insights into mental health and vulnerable communities during the COVID-19 pandemic in South Korea: Topic modeling of the news media. PLOS (*In review*).
-
-pdf
-
-1. Lee MJ. Media influence on humanitarian interventions: analysis of the Rohingya refugee crisis and international media coverage. *Int J Humanitarian Action* 6 2021 (20). DOI: 10.1186/s41018-021- 00108-5
-
-pdf 
-

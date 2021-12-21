@@ -4,7 +4,7 @@ navbar:
   title: "🧑🏻 Michelle Lee 👋"
   right:
     - text: CV
-      href: CV.html
+      href: file:///Volumes/GoogleDrive/My%20Drive/Michelle%20Lee%20-%20Curriculum%20vitae.pdf
     - text: publications 
       href: publications.html
     - text: projects

@@ -1,8 +1,8 @@
 ---
-title:
+title: "Michelle's CV"
 output:
   html_document:
     toc: true
 ---
 
-<embed src ="https://mjl2241.github.io/hi/LeeMJ_CV_Nov2021.pdf" type="application/pdf" style = "width:100%">
+<iframe src="https://docs.google.com/gview?/Volumes/GoogleDrive/My%20Drive/Michelle%20Lee%20-%20Curriculum%20vitae.pdf&embedded=true" style="width:100%; height:100%;" frameborder="0"></iframe>
