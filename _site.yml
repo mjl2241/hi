@@ -11,12 +11,10 @@ navbar:
       menu:
       - text: data science for social good
         href: dssg.html
-      - text: machine learning in epidemiology
-        href: ml_epi.html
       - text: stroke prediction
         href: stroke_pred.html
       - text: COVID19 Mobility Trends 
-        href: covid19.html
+        href: mobility_covid19.html
     - text: writing samples
       menu:
       - text: academic paper 
