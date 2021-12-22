@@ -5,35 +5,33 @@ navbar:
   right:
     - text: CV
       href: https://drive.google.com/file/d/1iSocTHp7DvSCLcgVYLtJcqYJG7FqGe68/view?usp=sharing
-    - text: publications 
+    - text: publications
       href: publications.html
     - text: projects
       menu:
       - text: data science for social good
-        href: dssg.html
+        href: pr_dssg.html
       - text: stroke prediction
-        href: stroke_pred.html
-      - text: COVID19 Mobility Trends 
-        href: mobility_covid19.html
+        href: pr_stroke_pred.html
+      - text: COVID19 Mobility Trends
+        href: pr_mobility_covid19.html
     - text: writing samples
       menu:
-      - text: academic paper 
-        href: Psychosocial.html
-      - text: digital surveillance report 
-        href: digital_surv.html
-      - text: human rights policy review 
-        href: human_rights.html
-      - text: epidemiology report 
-        href: CMR.html
+      - text: academic paper
+        href: ws_psychosocial.html
+      - text: digital surveillance report
+        href: https://drive.google.com/file/d/1VvYNXzLsuZmNMLYA-TFcikesrDR0akmE/view
+      - text: epidemiology report
+        href: ws_CMR.html
       - text: project proposal
-        href: SRH.html
+        href: ws_srh.html
     - icon: fa-envelope fa-lg
       href: mailto:<mishi9399@gmail.com>
     - icon: fa-github fa-lg
       href: http://github.com/mjl2241/
 
 output:
-  html_document:
-    css: style.css
-    include:
-      in_header: index.html
+ html_document:
+   css: style.css
+   include:
+     in_header: index.html
