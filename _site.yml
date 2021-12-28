@@ -9,22 +9,22 @@ navbar:
       href: publications.html
     - text: "projects"
       menu:
-      - text: "data science for social good"
-        href: pr_dssg.html
-      - text: "stroke prediction"
-        href: pr_stroke_prediction.html
-      - text: "COVID19 mobility trends"
-        href: pr_mobility_covid19.html
+        - text: "data science for social good"
+          href: pr_dssg.html
+        - text: "stroke prediction"
+          href: pr_stroke_prediction.html
+        - text: "COVID19 mobility trends"
+          href: pr_mobility_covid19.html
     - text: "writing samples"
       menu:
-      - text: "academic paper"
-        href: ws_psychosocial.html
-      - text: "digital surveillance report"
-        href: Michelle Lee - Digital Surveillance.pdf
-      - text: "epidemiology report"
-        href: ws_CMR.html
-      - text: "project proposal"
-        href: ws_srh.html
+        - text: "academic paper"
+          href: ws_psychosocial.html
+        - text: "digital surveillance report"
+          href: Michelle Lee - Digital Surveillance.pdf
+        - text: "epidemiology report"
+          href: ws_CMR.html
+        - text: "project proposal"
+          href: ws_srh.html
     - icon: fa-envelope fa-lg
       href: mailto:<mishi9399@gmail.com>
     - icon: fa-github fa-lg
