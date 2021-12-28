@@ -1,29 +1,29 @@
-name: "Michelle Website"
+name: "Michelle's website"
 output_dir: "."
 navbar:
   title: "🧑🏻 Michelle Lee 👋"
   right:
-    - text: CV
+    - text: "CV"
       href: Michelle Lee - Curriculum vitae.pdf
-    - text: publications
+    - text: "publications"
       href: publications.html
-    - text: projects
+    - text: "projects"
       menu:
-      - text: data science for social good
+      - text: "data science for social good"
         href: pr_dssg.html
-      - text: stroke prediction
+      - text: "stroke prediction"
         href: pr_stroke_prediction.html
-      - text: COVID19 Mobility Trends
+      - text: "COVID19 mobility trends"
         href: pr_mobility_covid19.html
-    - text: writing samples
+    - text: "writing samples"
       menu:
-      - text: academic paper
+      - text: "academic paper"
         href: ws_psychosocial.html
-      - text: digital surveillance report
+      - text: "digital surveillance report"
         href: https://drive.google.com/file/d/1VvYNXzLsuZmNMLYA-TFcikesrDR0akmE/view
-      - text: epidemiology report
+      - text: "epidemiology report"
         href: ws_CMR.html
-      - text: project proposal
+      - text: "project proposal"
         href: ws_srh.html
     - icon: fa-envelope fa-lg
       href: mailto:<mishi9399@gmail.com>
