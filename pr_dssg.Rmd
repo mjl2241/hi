@@ -1,19 +1,21 @@
 ---
-title: 
+title: "DSSG Covidcast: Forecasting Aids for Delphi"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
-# DSSG Covidcast: Forecasting Aids for Delphi
+[link to youtube final presentation](https://www.youtube.com/watch?v=48FYug28Bzw&ab_channel=StanfordDataScience)
+
 [link to github](https://github.com/StanfordDataScience/dssg_covidcast)
 
+
 #### Fellows 
-* **[Michelle Lee](https://mjl2241.github.io/hi/)** recently graduated with a Master’s in Public Health (Population Health & Biostatistics) from Columbia University.
-* **[Taha Bouhoun](https://github.com/Tahahaha7)** recently graduated with a Bachelor's in Computational Sciences from Minerva University. 
+* **Michelle Lee** recently graduated with a Master’s in Public Health (Population Health & Biostatistics) from Columbia University.
+* **Taha Bouhoun** recently graduated with a Bachelor's in Computational Sciences from Minerva University. 
 
 #### Mentors
-* **[Shilaan Alzahawi](https://shilaan.rbind.io)** is a PhD student in Organizational Behavior at Stanford University Graduate School of Business. Shilaan was the technical mentor for this project.
+* **Shilaan Alzahawi** is a PhD student in Organizational Behavior at Stanford University Graduate School of Business. Shilaan was the technical mentor for this project.
 * **Balasubramanian Narasimhan** (Stanford University) and **Daniel McDonald** (University of British Columbia, Canada) were the faculty mentors on this project. 
 
 ### Introduction
