@@ -12,7 +12,7 @@ navbar:
       - text: data science for social good
         href: pr_dssg.html
       - text: stroke prediction
-        href: pr_stroke_pred.html
+        href: pr_stroke_prediction.html
       - text: COVID19 Mobility Trends
         href: pr_mobility_covid19.html
     - text: writing samples
