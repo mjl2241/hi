@@ -4,7 +4,7 @@ navbar:
   title: "🧑🏻 Michelle Lee 👋"
   right:
     - text: "CV"
-      href: https://drive.google.com/file/d/1iSocTHp7DvSCLcgVYLtJcqYJG7FqGe68/view?usp=sharing
+      href: Michelle Lee - Curriculum vitae.pdf
     - text: "publications"
       href: publications.html
     - text: "projects"
@@ -20,7 +20,7 @@ navbar:
       - text: "academic paper"
         href: ws_psychosocial.html
       - text: "digital surveillance report"
-        href: https://drive.google.com/file/d/1VvYNXzLsuZmNMLYA-TFcikesrDR0akmE/view
+        href: Michelle Lee - Digital Surveillance.pdf
       - text: "epidemiology report"
         href: ws_CMR.html
       - text: "project proposal"

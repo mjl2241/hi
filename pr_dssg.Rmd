@@ -16,7 +16,7 @@ output:
 * **[Shilaan Alzahawi](https://shilaan.rbind.io)** is a PhD student in Organizational Behavior at Stanford University Graduate School of Business. Shilaan was the technical mentor for this project.
 * **Balasubramanian Narasimhan** (Stanford University) and **Daniel McDonald** (University of British Columbia, Canada) were the faculty mentors on this project. 
 
-#$# Introduction
+### Introduction
 
 This project was completed by a team of fellows as part of Stanford's Data Science for Social Good program in the Summer of 2021, working on a project originated by DELPHI research group at Carnegie Mellon University. The end goal of our project is to develop tools for comparing and evaluating COVID-19 forecasters for deaths, cases, and hospitalizations in the United States, aiming to help epidemiological researchers gain insights into the performance of their forecasts and lead to more accurate forecasting of epidemics in the future. You can read our final report in this directory and view the slides from our [final presentation](https://github.com/StanfordDataScience/dssg_covidcast/raw/main/Final_Presentation.pdf) and [final report](https://github.com/StanfordDataScience/dssg_covidcast/blob/main/Final_Report.pdf). 
 
