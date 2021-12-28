@@ -5,7 +5,7 @@ output:
 ---
 <image src = "./pix/grad.jpg" style="float:right;margin-right:20px; margin-top: 20px;margin-left:10px;width:40%">
 
-I received a Master's in Public Health from the department of [Population and Family Health at Columbia University Mailman School of Public Health](https://www.publichealth.columbia.edu/academics/departments/population-family-health). 
+I received a Master's in Public Health from the department of [Population and Family Health at Columbia University Mailman School of Public Health](https://www.publichealth.columbia.edu/academics/departments/population-family-health).
 
 My research area is on data-driven responses to humanitarian crises and using large-scale data to reduce adverse health outcomes among populations affected by conflict and natural disasters. Specifically, I wonder how machine learning and artificial intelligence techniques can be responsibly used in humanitarian action and low-resourced settings for efficient crisis response, mobilization, and implementation. I am passionate about critically thinking about statistical analysis, bias in models, and how to improve these models to better advance the interest of communities that are already marginalized by advancement in technology, including migrants and refugees. 
 
@@ -13,6 +13,6 @@ Building on my strong foundation in humanitarianism and data science, I am curre
 
 My important values are **integrity, transparency, and generosity**, which I try to uphold and live by everyday. My personal life goal is to be a positive influence in my community and uphold strong moral values. 
 
-[linkedin](https://www.linkedin.com/in/micjlee/)     
+[linkedin](https://www.linkedin.com/in/mjl2241/)     
 [github](https://github.com/mjl2241/public_projects.git)    
 [email](mailto:<mjl2241@cumc.columbia.edu>)
